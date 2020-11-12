@@ -24,7 +24,7 @@ public class Ejercicio1_2_8 {
 			cont=cont+1;
 		}
 		System.out.println("El numero mas grande es " + may);
-		System.out.println("El numero mas pequeño es " + min);
+		System.out.println("El numero mas pequeï¿½o es " + min);
 	}
 
 }
