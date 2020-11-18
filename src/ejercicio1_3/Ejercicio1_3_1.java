@@ -1,33 +1,25 @@
 package ejercicio1_3;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Ejercicio1_3_1 {
 
 	public static void main(String[] args) {
 		
-		int vNumeros[] = new int[10]; 
-		int num, suma=0, i=0;
-		float media=0;
-		
+		float vNumeros[] = new float[10]; 
+		Random azar = new Random();
 		Scanner leer = new Scanner(System.in);
+		float suma=0;
 		
-		for ( i = 0; i < vNumeros.length; i++) {
-			vNumeros[i]=0;
-		}
-		System.out.println("Dime 10 numeros");
-		num=leer.nextInt();
-		for ( i = 0; i < vNumeros.length; i++) {
-			if (vNumeros[i]==0) {
-				System.out.println(vNumeros[i]);
-			}
-		}
-		for ( i = 0; i < vNumeros.length; i++) {
-			suma=vNumeros[i]+suma;
+		for (int i = 0; i < vNumeros.length; i++) {
+			vNumeros[i] = azar.nextInt(9);
+			System.out.print(vNumeros[i]+ " - ");
+			suma = suma + vNumeros[i];
 		}
 		
-		//media=vNumeros[i]+suma;
-		//System.out.println("La media de los numeros introducidos es " + media);
+		
+		System.out.println("\nLa suma es "+ suma + " La media es: " + (suma/vNumeros.length));
 	}
 
 }
